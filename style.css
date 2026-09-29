@@ -1,0 +1,182 @@
+.palco1{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    background-color: rgb(255, 239, 239);
+}
+
+.palco1 div{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 0;
+    left: 110px;
+    background-color: blueviolet;
+    animation: vertical 1s infinite alternate;
+}
+
+.palco1:hover div{
+    background-color: #F400A1;
+    animation-play-state: paused;
+}
+
+@keyframes vertical{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-140px)
+    }
+}
+
+.palco2{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    background-color: rgb(255, 239, 239);
+}
+
+.palco2 div{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 80px;
+    left: 0px;
+    background-color: blueviolet;
+    animation: horizontal 3s infinite alternate;
+}
+
+.palco2:active div{
+    background-color: #F9629F;
+    border-radius: 50%;
+    animation-duration: 0.5s;
+}
+
+@keyframes horizontal{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(200px);
+    }
+}
+
+.palco3{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    background-color: rgb(255, 239, 239);
+}
+
+.palco3 div{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blueviolet;
+    animation: diagonal 2s infinite alternate;
+}
+
+.palco3:focus-visible div{
+    background-color: #32de84;
+    border: 3px solid black;
+    animation: horizontal 7s;
+}
+
+.palco3:hover div{
+    animation-play-state: paused;
+}
+
+.palco3:active div{
+    animation-play-state: running;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes diagonal{
+    from{
+        transform: translateX(0) translateY(0);
+    }
+
+    to{
+        transform: translateX(200px) translateY(140px);
+    }
+
+    25%{
+        background-color: #76FF7A;
+        border-radius: 25%;
+    }
+
+    50%{
+        background-color: pink;
+        border-radius: 50%;
+    }
+
+    75%{
+        background-color: yellow;
+        border-radius: 75%;
+    }
+}
+
+.palco4{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    background-color: rgb(255, 239, 239);
+}
+
+.palco4 div{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blueviolet;
+    animation: etapas 6s infinite alternate;
+}
+
+.palco4:hover div{
+    animation-duration: 1s;
+}
+
+@keyframes etapas{
+    20%{
+        transform: translateX(100px) translateY(120px);
+        background-color: aqua;
+    }
+
+    50%{
+        transform: translateX(77px) scaleX(2) scaleY(0.5);
+        background-color: #F0E68C;
+    }
+
+    100%{
+        transform: translateY(90px) scaleX(0.33) scaleY(1.5);
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    margin-bottom: 0;
+    text-align: center;
+}
